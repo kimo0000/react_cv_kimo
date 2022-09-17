@@ -1,0 +1,11 @@
+.not_found {
+    background-color: blueviolet;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.7);
+}

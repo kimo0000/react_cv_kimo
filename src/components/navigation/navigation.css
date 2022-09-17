@@ -1,0 +1,152 @@
+.navigation {
+    grid-column: 1;
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 25px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .navigation {
+        height: auto;
+        
+        grid-template-rows: 1fr;
+    }
+}
+
+.navigation .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .navigation .logo {
+        display: none;
+    }
+}
+
+.navigation .logo img {
+    width: 150px;
+    border-radius: 50%;  
+    object-fit: cover; 
+    box-shadow: 0 0 8px rgb(16, 2, 30), 0 0 12px rgb(12, 12, 19);
+    margin-bottom: 15px;
+}
+
+.navigation .logo h3 {
+    letter-spacing: 1.5px;
+}
+
+.navigation .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .navigation .links {
+        flex-flow: row wrap;
+        gap: 60px;
+    }
+}
+
+.navigation .links li {
+    padding: 15px 0;
+}
+
+@media (max-width: 767px) {
+    .navigation .links li  {
+        padding-left: 15px;
+    }
+}
+
+.navigation .links li a {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: inherit;
+}
+
+.active {
+    color: #ffc !important;
+}
+
+@media (max-width: 767px) {
+    .navigation .links li a {
+        gap: 10px;
+    }
+}
+
+.navigation .links li a i {
+    transition: all .3s;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+@media (max-width: 561px) {
+    .navigation .links li a i {
+        justify-content: space-between;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 680px) {
+    .navigation .links li a span {
+        display: none;
+    }
+}
+
+.navigation .links li:hover a i {
+    transform: translate(3px, 3px) scale(1.1);
+}
+
+.navigation .social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .navigation .social {
+        display: none;
+    }
+}
+
+.navigation .social li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social li a i {
+    font-size: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.navigation .copy_right {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .navigation .copy_right {
+        display: none;
+    }
+}
+
+.navigation .copy_right p {
+    font-weight: 600;
+}
+

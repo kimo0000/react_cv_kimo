@@ -1,0 +1,112 @@
+.contact {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    color: #fff;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    background-image: url('../../media/map.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    top: 31%;
+    width: 100%;
+    height: 50%;
+    background-image: url('../../media/shape.svg');
+}
+
+@media (max-width: 1230px) {
+    .contact::after {
+        display: none;
+    }
+}
+
+.contact .contact_overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 43%;
+    background-color: rgb(74, 4, 139);
+    z-index: 1;
+}
+
+.contact .contact_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 280px;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7);
+}
+
+.contact_content .contact_info h2 {
+    text-align: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.contact_content .contact_info h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background-color: #444;
+}
+
+.contact_content .contact_info .contact_address li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+
+.contact_content .contact_info .contact_address li:nth-child(1) {
+    color: #444;
+}
+
+.contact_content .contact_info .contact_address li a {
+    color: inherit;
+    cursor: pointer;
+}
+
+.contact_content .contact_social {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.contact_content .contact_social a {
+    padding: 10px;
+    width: 80px;
+    background-color: burlywood;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact_content .contact_social a span {
+    display: block;
+}

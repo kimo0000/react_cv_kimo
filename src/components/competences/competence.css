@@ -1,0 +1,179 @@
+.competences {
+    display: grid;
+    grid-template-columns: 40% repeat(2, 1fr);
+    grid-template-rows: 70% 30%;
+    gap: 10px 10px;
+}
+
+@media (max-width: 767px) {
+    .competences {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+    }
+}
+
+.language, .experience, .hobbit, .interet {
+     background-color: blueviolet;
+     padding: 10px;
+     border-radius: 25px;
+}
+
+@media (max-width: 767px) {
+    .language, .experience, .hobbit, .interet {
+          width: 100%;
+        }
+}
+
+/*Language*/
+.language {
+    grid-area: 1 / 1 / 2 / 1;
+}
+
+.language .progress_Bar {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.progress_Bar::before, .progress_Bar::after {
+    content: '';
+    position: absolute;
+    top: 36%;
+    width: 2px;
+    height: 140px;
+    background-color: rgba(188, 143, 143, 0.497);
+}
+
+.progress_Bar::before {
+    left: 60%;
+}
+
+.progress_Bar::after {
+    left: 96%;
+}
+
+.language .progress_Bar .prog_title h2 {
+    color: rosybrown;
+}
+
+.language .progress_Bar .years {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.language .progress_Bar .prog_title .bar {
+    position: relative;
+    height: 4px;
+    margin: 2px 0;
+    z-index: 1;
+}
+
+.language .progress_Bar .prog_title .bar::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(80, 80, 90);
+    animation: line .3s forwards ease-in-out;
+}
+
+@keyframes line {
+    to {
+         width: 100%;
+    }
+}
+
+/*Experience*/
+.experience {
+    grid-area: 1/2/1/-1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 85%;
+    color: rosybrown;
+    overflow: hidden;
+}
+
+.experience .exp_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.experience .exp_content .exp_box:nth-child(1) {
+    grid-area: 1/1/1/1;
+}
+
+.experience .exp_content .exp_box:nth-child(2) {
+    grid-area: 2/1/2/1;
+}
+
+.experience .exp_content .exp_box span,
+.experience .exp_content .exp_box p {
+    padding: 0 10px 15px;
+    color: #444;
+}
+
+
+/*Hobbit*/
+.hobbit {
+    grid-area: 2/1/2/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 90%;
+}
+
+.hobbit h2 {
+    grid-area: 1/1/1/1;
+    color: rosybrown;
+}
+
+.hobbit .hobbit_icon {
+    grid-area: 2/1/2/1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hobbit .hobbit_icon ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+}
+
+.hobbit .hobbit_icon ul li i {
+    color: rosybrown;
+}
+
+/*Interet*/
+.interet {
+    grid-area: 2/3/2/-1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 90%;
+}
+
+.interet h2 {
+    grid-area: 1/1/1/1;
+    color: rosybrown;
+}
+
+.interet .interet_content {
+    padding: 0 5px 0;
+}
+
+.interet .interet_content ul li {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: 900;
+}
+
+.interet .interet_content ul li i {
+    color: rosybrown;
+}
+
+
+
